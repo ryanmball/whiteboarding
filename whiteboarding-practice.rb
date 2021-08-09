@@ -24,7 +24,7 @@ p reverse_string("hello")
 # If number is less than 100, add to new array
 # Print/return new array
 
-def less_than_100(numbers)
+def less_than100(numbers)
   new_arr = []
   numbers.each do |number|
     if number < 100
@@ -34,4 +34,22 @@ def less_than_100(numbers)
   return new_arr
 end
 
-p less_than_100([99, 101, 88, 4, 2000, 50])
+p less_than100([99, 101, 88, 4, 2000, 50])
+
+# Reduce: Sum
+# Input: [1, 2, 3, 4]
+# Output: 10
+
+# Explanation: (1 + 2 + 3 + 4) = 10
+
+def reduce(numbers)
+  i = 0
+  sum = 0
+  while i < numbers.length
+    sum += numbers[i]
+    i += 1
+  end
+  return sum
+end
+
+p reduce([5, 20, 88, 10, 4, 3, 3])
