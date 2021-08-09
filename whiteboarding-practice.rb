@@ -61,7 +61,15 @@ p reduce([5, 20, 88, 10, 4, 3, 3])
 # Output: [8, 4, 10, 198, -8]
 
 def double(numbers)
-  numbers.map { |number| number * 2 }
+  # numbers.map { |number| number * 2 }
+  # OR
+  i = 0
+  doubled = []
+  while i < numbers.length
+    doubled << numbers[i] * 2
+    i += 1
+  end
+  return doubled
 end
 
 p double([4, 2, 5, 99, -4])
