@@ -106,7 +106,7 @@ p vote_count(["Dewey", "Truman", "Dewey", "Dewey", "Truman", "Truman", "Dewey", 
 
 def order_menu(menu)
   total = 0
-  menu.each do |item, price|
+  menu.each do |_item, price|
     total += price
   end
   return total
