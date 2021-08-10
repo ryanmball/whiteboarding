@@ -115,3 +115,23 @@ end
 
 p order_menu({"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2})
 
+
+# Array Max
+# Write a function that returns the greatest value from an array of numbers.
+
+# Input: [5, 17, -4, 20, 12]
+# Output: 20
+
+def max(numbers)
+  max = 0
+  numbers.each do |number|
+    if number > max
+      max = number
+    end
+  end
+  return max
+end
+
+p max([5, 17, -4, 20, 12])
+
+
