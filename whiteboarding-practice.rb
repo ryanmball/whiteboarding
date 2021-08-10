@@ -36,6 +36,7 @@ end
 
 p less_than100([99, 101, 88, 4, 2000, 50])
 
+
 # Reduce: Sum
 # Input: [1, 2, 3, 4]
 # Output: 10
@@ -53,6 +54,7 @@ def reduce(numbers)
 end
 
 p reduce([5, 20, 88, 10, 4, 3, 3])
+
 
 # Map: Double
 # Given an array of numbers, write a function that returns a new array whose values are the original array’s value doubled.
@@ -73,3 +75,43 @@ def double(numbers)
 end
 
 p double([4, 2, 5, 99, -4])
+
+
+# Count Votes
+# Given an array of strings, return a hash that provides of a count of how many times each string occurs.
+
+# Input: ["Dewey", "Truman", "Dewey", "Dewey", "Truman", "Truman", "Dewey", "Truman", "Truman", "Dewey", "Dewey"]
+
+# Output: {"Dewey" => 6, "Truman" => 5}
+
+# Explanation: "Dewey" occurs 6 times in the array, while "Truman" occurs 5 times.
+
+def vote_count(votes)
+  vote_count = Hash.new(0)
+  votes.each { |candidate| vote_count[candidate] += 1 }
+  return vote_count
+end
+
+p vote_count(["Dewey", "Truman", "Dewey", "Dewey", "Truman", "Truman", "Dewey", "Truman", "Truman", "Dewey", "Dewey"])
+
+
+# Order the Whole Menu
+# Given a hash, where the keys are strings representing food items, and the values are numbers representing the price of each food, return the amount someone would pay if they'd order one of each food from the entire menu.
+
+# Input: {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
+
+# Output: 14
+
+# Explanation: If someone would order one of everything on the menu, they'd pay a total of 14 (the sum of all the hash's values).
+
+def order_menu(menu)
+  total = 0
+  menu.each do |item, price|
+    total += price
+  end
+  return total
+end
+
+
+p order_menu({"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2})
+
