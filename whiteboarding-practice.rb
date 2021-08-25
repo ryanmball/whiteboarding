@@ -201,9 +201,23 @@ p popular(posts)
 # Output: 'UGCACCAGAAUU'
 
 def transcription(strand)
-  
+  rna = []
+  dna_arr = strand.split("")
+  dna_arr.each do |nucleotide|
+    if nucleotide == "G"
+      rna << "C"
+    elsif nucleotide == "C"
+      rna << "G"
+    elsif nucleotide == "T"
+      rna << "A"
+    elsif nucleotide == "A"
+      rna << "U"
+    end
+  end
+  rna.join
 end
 
+p transcription("ACGTGGTCTTAA")
 
 # Complete the Data I
 
