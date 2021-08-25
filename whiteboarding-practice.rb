@@ -312,3 +312,36 @@ def flatten_hash(hash)
 end
 
 p flatten_hash({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
+
+
+# Array Subset
+
+# Given two arrays, determine whether one is a subset of the other. It is considered a subset if all the values in one array are contained within the other.
+
+# NOTE: You must accomplish this in O(n) time. This is also known as linear time.
+
+# Input: [1, 2, 3, 4, 5, 6], [6, 3, 2]
+# Output: true
+
+# Input: [1, 2, 3, 4, 5, 6], [6, 3, 7]
+# Output: false
+
+def subset(arr1, arr2)
+  # str1 = arr1.sort.join
+  # str2 = arr2.sort.join
+  # p str1
+  # p str2
+  # if arr1.include?(arr2)
+  #   return true
+  # else
+  #   return false
+  # end
+  if (arr1 - arr2).length == arr1.length - arr2.length
+    return true
+  else
+    return false
+  end
+end
+
+p subset([1, 2, 3, 4, 5, 6], [6, 3, 2])     # returns true
+p subset([1, 2, 3, 4, 5, 6], [6, 3, 7])     # returns false
