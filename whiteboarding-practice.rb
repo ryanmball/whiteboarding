@@ -247,10 +247,15 @@ users_hash = {403 => "Aunty Em", 231 => "Joelle P.", 989 => "Lyndon Johnson", 11
 # {title: 'Mondays are the worst', submitted_by: "Aunty Em", likes: 644}
 # ]
 
+# def add_user_name(posts, users)
+#   posts.each do |post|
+#     post[:submitted_by] = users[post[:submitted_by]]
+#   end
+#   posts
+# end
+
 def add_user_name(posts, users)
-  posts.each do |post|
-    post[:submitted_by] = users[post[:submitted_by]]
-  end
+  posts.each { |post| post[:submitted_by] = users[post[:submitted_by]] }
   posts
 end
 
