@@ -289,3 +289,26 @@ def hash_combination(keys, value)
 end
 
 p hash_combination(keys_arr, value_int)
+
+
+# Flatten Hash
+
+# Given a hash, return a flat array containing all the hash’s keys and values.
+
+# Input: {“a” => 1, “b” => 2, “c” => 3, “d” => 4}
+# Output: [“a”, 1, “b”, 2, “c”, 3, “d”, 4]
+
+def flatten_hash(hash)
+  keys = hash.keys
+  values = hash.values
+  flattened_arr = []
+  i = 0
+  while i < keys.length
+    flattened_arr << keys[i]
+    flattened_arr << values[i]
+    i += 1
+  end
+  flattened_arr
+end
+
+p flatten_hash({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
