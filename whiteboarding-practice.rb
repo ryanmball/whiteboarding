@@ -260,3 +260,32 @@ def add_user_name(posts, users)
 end
 
 p add_user_name(posts_arr, users_hash)
+
+
+# ETL #1
+
+# You are given two parameters, an array and a number. Return a hash whose keys are each of the values from the array parameter, and whose values are the number parameter.
+
+# Input:
+
+# First argument: ["a", "e", "i", "o", "u"]
+# Second argument: 1
+keys_arr = ["a", "e", "i", "o", "u"]
+value_int = 1
+
+# Output:
+# {
+# 'a' => 1,
+# 'e' => 1,
+# 'i' => 1,
+# 'o' => 1,
+# 'u' => 1
+# }
+
+def hash_combination(keys, value)
+  hash_combo = {}
+  keys.each { |key| hash_combo[key] = value }
+  hash_combo
+end
+
+p hash_combination(keys_arr, value_int)
